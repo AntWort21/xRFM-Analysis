@@ -1,0 +1,43 @@
+model: xrfm
+
+candidates:
+  - name: xrfm_l2_small
+    tuning_metric_by_task:
+      regression: mse
+      classification: accuracy
+    min_subset_size: 5000
+    split_method: top_vector_agop_on_subset
+    rfm_params:
+      model:
+        kernel: l2
+        bandwidth: 5.0
+        exponent: 1.0
+        diag: false
+        bandwidth_mode: constant
+      fit:
+        reg: 0.001
+        iters: 3
+        M_batch_size: 1000
+        verbose: false
+        early_stop_rfm: true
+
+  - name: xrfm_l2_medium
+    tuning_metric_by_task:
+      regression: mse
+      classification: accuracy
+    min_subset_size: 10000
+    split_method: top_vector_agop_on_subset
+    rfm_params:
+      model:
+        kernel: l2
+        bandwidth: 10.0
+        exponent: 1.0
+        diag: false
+        bandwidth_mode: constant
+      fit:
+        reg: 0.001
+        iters: 5
+        M_batch_size: 1000
+        verbose: false
+        early_stop_rfm: true
+

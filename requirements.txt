@@ -1,0 +1,11 @@
+numpy>=1.24
+pandas>=2.0
+scikit-learn>=1.2
+PyYAML>=6.0
+xgboost>=2.0
+xrfm>=0.4.3
+torch>=2.0
+pyarrow>=14.0
+matplotlib>=3.8
+jupyter>=1.0
+

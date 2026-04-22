@@ -1,0 +1,64 @@
+xgboost:
+  regression:
+    candidates:
+      - name: xgb_reg_depth3
+        n_estimators: 300
+        max_depth: 3
+        learning_rate: 0.05
+        subsample: 0.9
+        colsample_bytree: 0.9
+        reg_lambda: 1.0
+      - name: xgb_reg_depth5
+        n_estimators: 300
+        max_depth: 5
+        learning_rate: 0.05
+        subsample: 0.9
+        colsample_bytree: 0.9
+        reg_lambda: 1.0
+  classification:
+    candidates:
+      - name: xgb_clf_depth3
+        n_estimators: 300
+        max_depth: 3
+        learning_rate: 0.05
+        subsample: 0.9
+        colsample_bytree: 0.9
+        reg_lambda: 1.0
+      - name: xgb_clf_depth5
+        n_estimators: 300
+        max_depth: 5
+        learning_rate: 0.05
+        subsample: 0.9
+        colsample_bytree: 0.9
+        reg_lambda: 1.0
+
+random_forest:
+  regression:
+    candidates:
+      - name: rf_reg_default
+        n_estimators: 300
+        max_depth: null
+        min_samples_leaf: 1
+        max_features: sqrt
+        n_jobs: -1
+      - name: rf_reg_regularized
+        n_estimators: 300
+        max_depth: 20
+        min_samples_leaf: 2
+        max_features: sqrt
+        n_jobs: -1
+  classification:
+    candidates:
+      - name: rf_clf_default
+        n_estimators: 300
+        max_depth: null
+        min_samples_leaf: 1
+        max_features: sqrt
+        n_jobs: -1
+      - name: rf_clf_regularized
+        n_estimators: 300
+        max_depth: 20
+        min_samples_leaf: 2
+        max_features: sqrt
+        n_jobs: -1
+

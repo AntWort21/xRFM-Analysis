@@ -1,0 +1,34 @@
+project:
+  name: COMP9417 xRFM comparison
+  results_raw_dir: results/raw
+  results_summary_dir: results/summary
+  splits_dir: data/splits
+
+random_seed: 42
+
+split:
+  train_size: 0.60
+  validation_size: 0.20
+  test_size: 0.20
+  stratify_classification: true
+
+preprocessing:
+  numeric_imputer: median
+  categorical_imputer: most_frequent
+  scale_numeric: true
+  one_hot_encode_categorical: true
+  auto_detect_categorical: true
+
+metrics:
+  regression:
+    primary: rmse
+    report:
+      - rmse
+      - mae
+      - r2
+  classification:
+    primary: accuracy
+    report:
+      - accuracy
+      - auc_roc
+
