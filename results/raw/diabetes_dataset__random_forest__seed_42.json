@@ -1,0 +1,89 @@
+{
+  "best_params": {
+    "max_depth": 20,
+    "max_features": "sqrt",
+    "min_samples_leaf": 2,
+    "n_estimators": 300,
+    "n_jobs": -1,
+    "name": "rf_clf_regularized"
+  },
+  "categorical_columns": [
+    "gender",
+    "location",
+    "smoking_history"
+  ],
+  "created_at": "2026-04-23T00:05:19+00:00",
+  "dataset": "diabetes_dataset",
+  "feature_dim": 76,
+  "inference_time_per_sample_seconds": 2.4754083511652425e-06,
+  "model": "random_forest",
+  "numeric_columns": [
+    "year",
+    "age",
+    "race:AfricanAmerican",
+    "race:Asian",
+    "race:Caucasian",
+    "race:Hispanic",
+    "race:Other",
+    "hypertension",
+    "heart_disease",
+    "bmi",
+    "hbA1c_level",
+    "blood_glucose_level"
+  ],
+  "seed": 42,
+  "split_path": "/Users/yuancao/Desktop/xRFM-Analysis/data/splits/diabetes_dataset__seed_42.json",
+  "target_column": "diabetes",
+  "target_metadata": {
+    "class_mapping": {
+      "0": 0,
+      "1": 1
+    },
+    "classes": [
+      "0",
+      "1"
+    ],
+    "encoding": "label"
+  },
+  "task": "classification",
+  "test_metrics": {
+    "accuracy": 0.9723,
+    "auc_roc": 0.965250337512054
+  },
+  "test_size": 20000,
+  "train_size": 60000,
+  "training_time_seconds": 0.8436974580399692,
+  "tuning_results": [
+    {
+      "name": "rf_clf_default",
+      "validation_metrics": {
+        "accuracy": 0.9718,
+        "auc_roc": 0.9632121825779493
+      },
+      "validation_score": 0.9718
+    },
+    {
+      "name": "rf_clf_regularized",
+      "validation_metrics": {
+        "accuracy": 0.9719,
+        "auc_roc": 0.9665113468338156
+      },
+      "validation_score": 0.9719
+    },
+    {
+      "name": "rf_clf_shallow",
+      "validation_metrics": {
+        "accuracy": 0.97185,
+        "auc_roc": 0.9585987142397944
+      },
+      "validation_score": 0.97185
+    }
+  ],
+  "validation_metrics": {
+    "accuracy": 0.9719,
+    "auc_roc": 0.9665113468338156
+  },
+  "validation_score": 0.9719,
+  "validation_score_metric": "accuracy",
+  "validation_size": 20000
+}

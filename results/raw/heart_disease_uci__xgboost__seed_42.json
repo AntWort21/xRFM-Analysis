@@ -4,7 +4,8 @@
     "learning_rate": 0.05,
     "max_depth": 5,
     "n_estimators": 300,
-    "name": "xgb_clf_depth5",
+    "n_jobs": 1,
+    "name": "xgb_clf_depth5_lr005",
     "reg_lambda": 1.0,
     "subsample": 0.9
   },
@@ -18,10 +19,10 @@
     "slope",
     "thal"
   ],
-  "created_at": "2026-04-22T23:41:45+00:00",
+  "created_at": "2026-04-23T00:04:01+00:00",
   "dataset": "heart_disease_uci",
   "feature_dim": 29,
-  "inference_time_per_sample_seconds": 3.9354620283753006e-06,
+  "inference_time_per_sample_seconds": 4.133380412974435e-06,
   "model": "xgboost",
   "numeric_columns": [
     "age",
@@ -32,7 +33,7 @@
     "ca"
   ],
   "seed": 42,
-  "split_path": "/Users/yuancao/Desktop/9417GP/data/splits/heart_disease_uci__seed_42.json",
+  "split_path": "/Users/yuancao/Desktop/xRFM-Analysis/data/splits/heart_disease_uci__seed_42.json",
   "target_column": "has_disease",
   "target_metadata": {
     "class_mapping": {
@@ -55,10 +56,10 @@
   },
   "test_size": 184,
   "train_size": 552,
-  "training_time_seconds": 0.02612425002735108,
+  "training_time_seconds": 0.025997042015660554,
   "tuning_results": [
     {
-      "name": "xgb_clf_depth3",
+      "name": "xgb_clf_depth3_lr005",
       "validation_metrics": {
         "accuracy": 0.782608695652174,
         "auc_roc": 0.8619081779053085
@@ -66,12 +67,20 @@
       "validation_score": 0.782608695652174
     },
     {
-      "name": "xgb_clf_depth5",
+      "name": "xgb_clf_depth5_lr005",
       "validation_metrics": {
         "accuracy": 0.7880434782608695,
         "auc_roc": 0.849713055954089
       },
       "validation_score": 0.7880434782608695
+    },
+    {
+      "name": "xgb_clf_depth3_lr01",
+      "validation_metrics": {
+        "accuracy": 0.782608695652174,
+        "auc_roc": 0.8620277379244381
+      },
+      "validation_score": 0.782608695652174
     }
   ],
   "validation_metrics": {

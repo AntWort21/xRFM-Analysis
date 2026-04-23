@@ -4,15 +4,16 @@
     "learning_rate": 0.05,
     "max_depth": 5,
     "n_estimators": 300,
-    "name": "xgb_reg_depth5",
+    "n_jobs": 1,
+    "name": "xgb_reg_depth5_lr005",
     "reg_lambda": 1.0,
     "subsample": 0.9
   },
   "categorical_columns": [],
-  "created_at": "2026-04-22T23:41:32+00:00",
+  "created_at": "2026-04-23T00:03:57+00:00",
   "dataset": "winequality_white",
   "feature_dim": 11,
-  "inference_time_per_sample_seconds": 1.4851183383440485e-06,
+  "inference_time_per_sample_seconds": 1.5076101942900189e-06,
   "model": "xgboost",
   "numeric_columns": [
     "fixed acidity",
@@ -28,7 +29,7 @@
     "alcohol"
   ],
   "seed": 42,
-  "split_path": "/Users/yuancao/Desktop/9417GP/data/splits/winequality_white__seed_42.json",
+  "split_path": "/Users/yuancao/Desktop/xRFM-Analysis/data/splits/winequality_white__seed_42.json",
   "target_column": "quality",
   "target_metadata": {
     "encoding": "float"
@@ -41,10 +42,10 @@
   },
   "test_size": 980,
   "train_size": 2938,
-  "training_time_seconds": 0.07349770795553923,
+  "training_time_seconds": 0.07334445795277134,
   "tuning_results": [
     {
-      "name": "xgb_reg_depth3",
+      "name": "xgb_reg_depth3_lr005",
       "validation_metrics": {
         "mae": 0.5080085751961688,
         "r2": 0.42985714468616865,
@@ -53,13 +54,22 @@
       "validation_score": 0.6535153813041107
     },
     {
-      "name": "xgb_reg_depth5",
+      "name": "xgb_reg_depth5_lr005",
       "validation_metrics": {
         "mae": 0.47426684194681595,
         "r2": 0.4683633154711898,
         "rmse": 0.6310611448266906
       },
       "validation_score": 0.6310611448266906
+    },
+    {
+      "name": "xgb_reg_depth3_lr01",
+      "validation_metrics": {
+        "mae": 0.5053323789518707,
+        "r2": 0.42545317544373096,
+        "rmse": 0.6560345089248139
+      },
+      "validation_score": 0.6560345089248139
     }
   ],
   "validation_metrics": {

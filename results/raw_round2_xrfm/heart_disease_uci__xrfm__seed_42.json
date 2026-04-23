@@ -1,17 +1,17 @@
 {
   "best_params": {
-    "min_subset_size": 10000,
-    "name": "xrfm_l2_medium",
+    "min_subset_size": 5000,
+    "name": "xrfm_agop_5k_bw5_reg001_iter2",
     "rfm_params": {
       "fit": {
         "M_batch_size": 1000,
         "early_stop_rfm": true,
-        "iters": 5,
+        "iters": 2,
         "reg": 0.001,
         "verbose": false
       },
       "model": {
-        "bandwidth": 10.0,
+        "bandwidth": 5.0,
         "bandwidth_mode": "constant",
         "diag": false,
         "exponent": 1.0,
@@ -127,11 +127,11 @@
       5
     ]
   },
-  "created_at": "2026-04-23T00:04:13+00:00",
+  "created_at": "2026-04-23T02:39:45+00:00",
   "dataset": "heart_disease_uci",
   "device": "cpu",
   "feature_dim": 29,
-  "inference_time_per_sample_seconds": 2.056385868775618e-06,
+  "inference_time_per_sample_seconds": 1.6922551920920934e-06,
   "model": "xrfm",
   "numeric_columns": [
     "age",
@@ -160,15 +160,15 @@
   },
   "task": "classification",
   "test_metrics": {
-    "accuracy": 0.8586956521739131,
-    "auc_roc": 0.8946078431372549
+    "accuracy": 0.8532608695652174,
+    "auc_roc": 0.8959230033476806
   },
   "test_size": 184,
   "train_size": 552,
-  "training_time_seconds": 0.014090250013396144,
+  "training_time_seconds": 0.0198028750019148,
   "tuning_results": [
     {
-      "name": "xrfm_random_pca_light",
+      "name": "xrfm_agop_5k_bw5_reg001_iter2",
       "validation_metrics": {
         "accuracy": 0.7989130434782609,
         "auc_roc": 0.8538378766140603
@@ -176,7 +176,7 @@
       "validation_score": 0.7989130434782609
     },
     {
-      "name": "xrfm_l2_small",
+      "name": "xrfm_agop_5k_bw5_reg001_iter3",
       "validation_metrics": {
         "accuracy": 0.7989130434782609,
         "auc_roc": 0.8538378766140603
@@ -184,19 +184,35 @@
       "validation_score": 0.7989130434782609
     },
     {
-      "name": "xrfm_l2_medium",
+      "name": "xrfm_agop_5k_bw3_reg001_iter3",
       "validation_metrics": {
-        "accuracy": 0.8043478260869565,
-        "auc_roc": 0.8540172166427547
+        "accuracy": 0.7989130434782609,
+        "auc_roc": 0.8522238163558106
       },
-      "validation_score": 0.8043478260869565
+      "validation_score": 0.7989130434782609
+    },
+    {
+      "name": "xrfm_agop_5k_bw5_reg01_iter3",
+      "validation_metrics": {
+        "accuracy": 0.7880434782608695,
+        "auc_roc": 0.8632233381157339
+      },
+      "validation_score": 0.7880434782608695
+    },
+    {
+      "name": "xrfm_agop_10k_bw5_reg001_iter3",
+      "validation_metrics": {
+        "accuracy": 0.7989130434782609,
+        "auc_roc": 0.8538378766140603
+      },
+      "validation_score": 0.7989130434782609
     }
   ],
   "validation_metrics": {
-    "accuracy": 0.8043478260869565,
-    "auc_roc": 0.8540172166427547
+    "accuracy": 0.7989130434782609,
+    "auc_roc": 0.8538378766140603
   },
-  "validation_score": 0.8043478260869565,
+  "validation_score": 0.7989130434782609,
   "validation_score_metric": "accuracy",
   "validation_size": 184
 }

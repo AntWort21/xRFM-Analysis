@@ -1,0 +1,129 @@
+{
+  "best_params": {
+    "max_depth": 10,
+    "max_features": "sqrt",
+    "min_samples_leaf": 5,
+    "n_estimators": 200,
+    "n_jobs": -1,
+    "name": "rf_reg_shallow"
+  },
+  "categorical_columns": [],
+  "created_at": "2026-04-23T00:05:30+00:00",
+  "dataset": "online_news_popularity",
+  "feature_dim": 59,
+  "inference_time_per_sample_seconds": 3.3511476853042784e-06,
+  "model": "random_forest",
+  "numeric_columns": [
+    "timedelta",
+    "n_tokens_title",
+    "n_tokens_content",
+    "n_unique_tokens",
+    "n_non_stop_words",
+    "n_non_stop_unique_tokens",
+    "num_hrefs",
+    "num_self_hrefs",
+    "num_imgs",
+    "num_videos",
+    "average_token_length",
+    "num_keywords",
+    "data_channel_is_lifestyle",
+    "data_channel_is_entertainment",
+    "data_channel_is_bus",
+    "data_channel_is_socmed",
+    "data_channel_is_tech",
+    "data_channel_is_world",
+    "kw_min_min",
+    "kw_max_min",
+    "kw_avg_min",
+    "kw_min_max",
+    "kw_max_max",
+    "kw_avg_max",
+    "kw_min_avg",
+    "kw_max_avg",
+    "kw_avg_avg",
+    "self_reference_min_shares",
+    "self_reference_max_shares",
+    "self_reference_avg_sharess",
+    "weekday_is_monday",
+    "weekday_is_tuesday",
+    "weekday_is_wednesday",
+    "weekday_is_thursday",
+    "weekday_is_friday",
+    "weekday_is_saturday",
+    "weekday_is_sunday",
+    "is_weekend",
+    "LDA_00",
+    "LDA_01",
+    "LDA_02",
+    "LDA_03",
+    "LDA_04",
+    "global_subjectivity",
+    "global_sentiment_polarity",
+    "global_rate_positive_words",
+    "global_rate_negative_words",
+    "rate_positive_words",
+    "rate_negative_words",
+    "avg_positive_polarity",
+    "min_positive_polarity",
+    "max_positive_polarity",
+    "avg_negative_polarity",
+    "min_negative_polarity",
+    "max_negative_polarity",
+    "title_subjectivity",
+    "title_sentiment_polarity",
+    "abs_title_subjectivity",
+    "abs_title_sentiment_polarity"
+  ],
+  "seed": 42,
+  "split_path": "/Users/yuancao/Desktop/xRFM-Analysis/data/splits/online_news_popularity__seed_42.json",
+  "target_column": "shares",
+  "target_metadata": {
+    "encoding": "float"
+  },
+  "task": "regression",
+  "test_metrics": {
+    "mae": 3005.8936939556593,
+    "r2": 0.03160252470928315,
+    "rmse": 10810.10175341508
+  },
+  "test_size": 7929,
+  "train_size": 23786,
+  "training_time_seconds": 0.7719430410070345,
+  "tuning_results": [
+    {
+      "name": "rf_reg_default",
+      "validation_metrics": {
+        "mae": 3281.7477748349943,
+        "r2": 0.007387347045508474,
+        "rmse": 14079.09439966461
+      },
+      "validation_score": 14079.09439966461
+    },
+    {
+      "name": "rf_reg_regularized",
+      "validation_metrics": {
+        "mae": 3159.6185474349013,
+        "r2": 0.01228408889715904,
+        "rmse": 14044.32407587534
+      },
+      "validation_score": 14044.32407587534
+    },
+    {
+      "name": "rf_reg_shallow",
+      "validation_metrics": {
+        "mae": 3054.5662762904813,
+        "r2": 0.01603026649044348,
+        "rmse": 14017.665340712094
+      },
+      "validation_score": 14017.665340712094
+    }
+  ],
+  "validation_metrics": {
+    "mae": 3054.5662762904813,
+    "r2": 0.01603026649044348,
+    "rmse": 14017.665340712094
+  },
+  "validation_score": 14017.665340712094,
+  "validation_score_metric": "rmse",
+  "validation_size": 7929
+}

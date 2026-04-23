@@ -8,10 +8,10 @@
     "name": "rf_reg_default"
   },
   "categorical_columns": [],
-  "created_at": "2026-04-22T23:29:30+00:00",
+  "created_at": "2026-04-23T00:03:43+00:00",
   "dataset": "winequality_white",
   "feature_dim": 11,
-  "inference_time_per_sample_seconds": 2.6630696945120485e-05,
+  "inference_time_per_sample_seconds": 2.698954081932577e-05,
   "model": "random_forest",
   "numeric_columns": [
     "fixed acidity",
@@ -27,7 +27,7 @@
     "alcohol"
   ],
   "seed": 42,
-  "split_path": "/Users/yuancao/Desktop/9417GP/data/splits/winequality_white__seed_42.json",
+  "split_path": "/Users/yuancao/Desktop/xRFM-Analysis/data/splits/winequality_white__seed_42.json",
   "target_column": "quality",
   "target_metadata": {
     "encoding": "float"
@@ -40,7 +40,7 @@
   },
   "test_size": 980,
   "train_size": 2938,
-  "training_time_seconds": 0.17003287497209385,
+  "training_time_seconds": 0.17056670901365578,
   "tuning_results": [
     {
       "name": "rf_reg_default",
@@ -55,10 +55,19 @@
       "name": "rf_reg_regularized",
       "validation_metrics": {
         "mae": 0.4421504841430731,
-        "r2": 0.5281742466098014,
+        "r2": 0.5281742466098016,
         "rmse": 0.5945040143820489
       },
       "validation_score": 0.5945040143820489
+    },
+    {
+      "name": "rf_reg_shallow",
+      "validation_metrics": {
+        "mae": 0.48743179016672056,
+        "r2": 0.46745837024396897,
+        "rmse": 0.6315980086049389
+      },
+      "validation_score": 0.6315980086049389
     }
   ],
   "validation_metrics": {
