@@ -1,0 +1,202 @@
+{
+  "best_params": {
+    "min_subset_size": 10000,
+    "name": "xrfm_l2_medium",
+    "rfm_params": {
+      "fit": {
+        "M_batch_size": 1000,
+        "early_stop_rfm": true,
+        "iters": 5,
+        "reg": 0.001,
+        "verbose": false
+      },
+      "model": {
+        "bandwidth": 10.0,
+        "bandwidth_mode": "constant",
+        "diag": false,
+        "exponent": 1.0,
+        "kernel": "l2"
+      }
+    },
+    "split_method": "top_vector_agop_on_subset",
+    "tuning_metric": null,
+    "tuning_metric_by_task": {
+      "classification": "accuracy",
+      "regression": "mse"
+    }
+  },
+  "categorical_columns": [
+    "sex",
+    "dataset",
+    "cp",
+    "fbs",
+    "restecg",
+    "exang",
+    "slope",
+    "thal"
+  ],
+  "categorical_info": {
+    "categorical_indices": [
+      [
+        6,
+        7
+      ],
+      [
+        8,
+        9,
+        10,
+        11
+      ],
+      [
+        12,
+        13,
+        14,
+        15
+      ],
+      [
+        16,
+        17
+      ],
+      [
+        18,
+        19,
+        20
+      ],
+      [
+        21,
+        22
+      ],
+      [
+        23,
+        24,
+        25
+      ],
+      [
+        26,
+        27,
+        28
+      ]
+    ],
+    "categorical_levels": {
+      "cp": [
+        "asymptomatic",
+        "atypical angina",
+        "non-anginal",
+        "typical angina"
+      ],
+      "dataset": [
+        "Cleveland",
+        "Hungary",
+        "Switzerland",
+        "VA Long Beach"
+      ],
+      "exang": [
+        "False",
+        "True"
+      ],
+      "fbs": [
+        "False",
+        "True"
+      ],
+      "restecg": [
+        "lv hypertrophy",
+        "normal",
+        "st-t abnormality"
+      ],
+      "sex": [
+        "Female",
+        "Male"
+      ],
+      "slope": [
+        "downsloping",
+        "flat",
+        "upsloping"
+      ],
+      "thal": [
+        "fixed defect",
+        "normal",
+        "reversable defect"
+      ]
+    },
+    "numerical_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "created_at": "2026-04-23T00:04:13+00:00",
+  "dataset": "heart_disease_uci",
+  "device": "cpu",
+  "feature_dim": 29,
+  "inference_time_per_sample_seconds": 2.056385868775618e-06,
+  "model": "xrfm",
+  "numeric_columns": [
+    "age",
+    "trestbps",
+    "chol",
+    "thalch",
+    "oldpeak",
+    "ca"
+  ],
+  "seed": 42,
+  "split_path": "/Users/yuancao/Desktop/xRFM-Analysis/data/splits/heart_disease_uci__seed_42.json",
+  "target_column": "has_disease",
+  "target_metadata": {
+    "class_mapping": {
+      "0": 0,
+      "1": 1
+    },
+    "classes": [
+      "0",
+      "1"
+    ],
+    "encoding": "label",
+    "rule": "has_disease = 1 if num > 0 else 0",
+    "source_column": "num",
+    "target_transform": "heart_disease_binary"
+  },
+  "task": "classification",
+  "test_metrics": {
+    "accuracy": 0.8586956521739131,
+    "auc_roc": 0.8946078431372549
+  },
+  "test_size": 184,
+  "train_size": 552,
+  "training_time_seconds": 0.014090250013396144,
+  "tuning_results": [
+    {
+      "name": "xrfm_random_pca_light",
+      "validation_metrics": {
+        "accuracy": 0.7989130434782609,
+        "auc_roc": 0.8538378766140603
+      },
+      "validation_score": 0.7989130434782609
+    },
+    {
+      "name": "xrfm_l2_small",
+      "validation_metrics": {
+        "accuracy": 0.7989130434782609,
+        "auc_roc": 0.8538378766140603
+      },
+      "validation_score": 0.7989130434782609
+    },
+    {
+      "name": "xrfm_l2_medium",
+      "validation_metrics": {
+        "accuracy": 0.8043478260869565,
+        "auc_roc": 0.8540172166427547
+      },
+      "validation_score": 0.8043478260869565
+    }
+  ],
+  "validation_metrics": {
+    "accuracy": 0.8043478260869565,
+    "auc_roc": 0.8540172166427547
+  },
+  "validation_score": 0.8043478260869565,
+  "validation_score_metric": "accuracy",
+  "validation_size": 184
+}

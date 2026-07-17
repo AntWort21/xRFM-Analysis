@@ -1,0 +1,73 @@
+datasets:
+  - name: diabetes_dataset
+    path: data/raw/diabetes_dataset.csv
+    task: classification
+    target_column: diabetes
+    drop_columns: []
+    categorical_columns:
+      - gender
+      - location
+      - smoking_history
+    notes: "Large-n mixed-type classification dataset. Good candidate for large-scale experiments."
+
+  - name: heart_disease_uci
+    path: data/raw/heart_disease_uci.csv
+    task: classification
+    target_column: has_disease
+    target_transform: heart_disease_binary
+    drop_columns:
+      - id
+      - num
+    categorical_columns:
+      - sex
+      - dataset
+      - cp
+      - fbs
+      - restecg
+      - exang
+      - slope
+      - thal
+    notes: "Binary classification version derived from num > 0. Requires preprocessing step to create has_disease before training."
+
+  - name: student_dropout_academic_success
+    path: data/raw/Predict Students' Dropout and Academic Success.csv
+    task: classification
+    target_column: Target
+    drop_columns: []
+    categorical_columns:
+      - Marital status
+      - Application mode
+      - Application order
+      - Course
+      - Daytime/evening attendance
+      - Previous qualification
+      - Nacionality
+      - Mother's qualification
+      - Father's qualification
+      - Mother's occupation
+      - Father's occupation
+      - Displaced
+      - Educational special needs
+      - Debtor
+      - Tuition fees up to date
+      - Gender
+      - Scholarship holder
+      - International
+    notes: "Multiclass mixed-type classification dataset. Good candidate for interpretability analysis."
+
+  - name: online_news_popularity
+    path: data/raw/OnlineNewsPopularity.csv
+    task: regression
+    target_column: shares
+    drop_columns:
+      - url
+    categorical_columns: []
+    notes: "Large-n, high-dimensional regression dataset. Good candidate for subsampling experiments. Column names may need whitespace stripping."
+
+  - name: winequality_white
+    path: data/raw/winequality-white.csv
+    task: regression
+    target_column: quality
+    drop_columns: []
+    categorical_columns: []
+    notes: "Medium-sized numeric regression dataset. Good lightweight regression benchmark."

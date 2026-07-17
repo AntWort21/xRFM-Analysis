@@ -1,0 +1,135 @@
+{
+  "best_params": {
+    "min_subset_size": 5000,
+    "name": "xrfm_agop_5k_bw5_reg01_iter3",
+    "rfm_params": {
+      "fit": {
+        "M_batch_size": 1000,
+        "early_stop_rfm": true,
+        "iters": 3,
+        "reg": 0.01,
+        "verbose": false
+      },
+      "model": {
+        "bandwidth": 5.0,
+        "bandwidth_mode": "constant",
+        "diag": false,
+        "exponent": 1.0,
+        "kernel": "l2"
+      }
+    },
+    "split_method": "top_vector_agop_on_subset",
+    "tuning_metric": null,
+    "tuning_metric_by_task": {
+      "classification": "accuracy",
+      "regression": "mse"
+    }
+  },
+  "categorical_columns": [],
+  "categorical_info": {
+    "categorical_indices": [],
+    "categorical_levels": {},
+    "numerical_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ]
+  },
+  "created_at": "2026-04-23T02:39:43+00:00",
+  "dataset": "winequality_white",
+  "device": "cpu",
+  "feature_dim": 11,
+  "inference_time_per_sample_seconds": 1.8625418009350494e-06,
+  "model": "xrfm",
+  "numeric_columns": [
+    "fixed acidity",
+    "volatile acidity",
+    "citric acid",
+    "residual sugar",
+    "chlorides",
+    "free sulfur dioxide",
+    "total sulfur dioxide",
+    "density",
+    "pH",
+    "sulphates",
+    "alcohol"
+  ],
+  "seed": 42,
+  "split_path": "/Users/yuancao/Desktop/xRFM-Analysis/data/splits/winequality_white__seed_42.json",
+  "target_column": "quality",
+  "target_metadata": {
+    "encoding": "float"
+  },
+  "task": "regression",
+  "test_metrics": {
+    "mae": 0.4230901757065131,
+    "r2": 0.5229300556931709,
+    "rmse": 0.6078469017366549
+  },
+  "test_size": 980,
+  "train_size": 2938,
+  "training_time_seconds": 0.16657525004120544,
+  "tuning_results": [
+    {
+      "name": "xrfm_agop_5k_bw5_reg001_iter2",
+      "validation_metrics": {
+        "mae": 0.4026990306620695,
+        "r2": 0.5086941010307999,
+        "rmse": 0.6066524555330468
+      },
+      "validation_score": 0.6066524555330468
+    },
+    {
+      "name": "xrfm_agop_5k_bw5_reg001_iter3",
+      "validation_metrics": {
+        "mae": 0.4026990306620695,
+        "r2": 0.5086941010307999,
+        "rmse": 0.6066524555330468
+      },
+      "validation_score": 0.6066524555330468
+    },
+    {
+      "name": "xrfm_agop_5k_bw3_reg001_iter3",
+      "validation_metrics": {
+        "mae": 0.40312790384097974,
+        "r2": 0.49236926502219625,
+        "rmse": 0.6166488487125259
+      },
+      "validation_score": 0.6166488487125259
+    },
+    {
+      "name": "xrfm_agop_5k_bw5_reg01_iter3",
+      "validation_metrics": {
+        "mae": 0.4107063994115713,
+        "r2": 0.5160673453832565,
+        "rmse": 0.6020830966248059
+      },
+      "validation_score": 0.6020830966248059
+    },
+    {
+      "name": "xrfm_agop_10k_bw5_reg001_iter3",
+      "validation_metrics": {
+        "mae": 0.4026990306620695,
+        "r2": 0.5086941010307999,
+        "rmse": 0.6066524555330468
+      },
+      "validation_score": 0.6066524555330468
+    }
+  ],
+  "validation_metrics": {
+    "mae": 0.4107063994115713,
+    "r2": 0.5160673453832565,
+    "rmse": 0.6020830966248059
+  },
+  "validation_score": 0.6020830966248059,
+  "validation_score_metric": "rmse",
+  "validation_size": 980
+}

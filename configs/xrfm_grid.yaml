@@ -1,0 +1,102 @@
+model: xrfm
+
+candidates:
+  - name: xrfm_agop_5k_bw5_reg001_iter2
+    tuning_metric_by_task:
+      regression: mse
+      classification: accuracy
+    min_subset_size: 5000
+    split_method: top_vector_agop_on_subset
+    rfm_params:
+      model:
+        kernel: l2
+        bandwidth: 5.0
+        exponent: 1.0
+        diag: false
+        bandwidth_mode: constant
+      fit:
+        reg: 0.001
+        iters: 2
+        M_batch_size: 1000
+        verbose: false
+        early_stop_rfm: true
+
+  - name: xrfm_agop_5k_bw5_reg001_iter3
+    tuning_metric_by_task:
+      regression: mse
+      classification: accuracy
+    min_subset_size: 5000
+    split_method: top_vector_agop_on_subset
+    rfm_params:
+      model:
+        kernel: l2
+        bandwidth: 5.0
+        exponent: 1.0
+        diag: false
+        bandwidth_mode: constant
+      fit:
+        reg: 0.001
+        iters: 3
+        M_batch_size: 1000
+        verbose: false
+        early_stop_rfm: true
+
+  - name: xrfm_agop_5k_bw3_reg001_iter3
+    tuning_metric_by_task:
+      regression: mse
+      classification: accuracy
+    min_subset_size: 5000
+    split_method: top_vector_agop_on_subset
+    rfm_params:
+      model:
+        kernel: l2
+        bandwidth: 3.0
+        exponent: 1.0
+        diag: false
+        bandwidth_mode: constant
+      fit:
+        reg: 0.001
+        iters: 3
+        M_batch_size: 1000
+        verbose: false
+        early_stop_rfm: true
+
+  - name: xrfm_agop_5k_bw5_reg01_iter3
+    tuning_metric_by_task:
+      regression: mse
+      classification: accuracy
+    min_subset_size: 5000
+    split_method: top_vector_agop_on_subset
+    rfm_params:
+      model:
+        kernel: l2
+        bandwidth: 5.0
+        exponent: 1.0
+        diag: false
+        bandwidth_mode: constant
+      fit:
+        reg: 0.01
+        iters: 3
+        M_batch_size: 1000
+        verbose: false
+        early_stop_rfm: true
+
+  - name: xrfm_agop_10k_bw5_reg001_iter3
+    tuning_metric_by_task:
+      regression: mse
+      classification: accuracy
+    min_subset_size: 10000
+    split_method: top_vector_agop_on_subset
+    rfm_params:
+      model:
+        kernel: l2
+        bandwidth: 5.0
+        exponent: 1.0
+        diag: false
+        bandwidth_mode: constant
+      fit:
+        reg: 0.001
+        iters: 3
+        M_batch_size: 1000
+        verbose: false
+        early_stop_rfm: true

@@ -1,0 +1,23 @@
+model: xrfm
+
+candidates:
+  - name: xrfm_smoke_cpu
+    tuning_metric_by_task:
+      regression: mse
+      classification: accuracy
+    min_subset_size: 10000
+    split_method: top_vector_agop_on_subset
+    rfm_params:
+      model:
+        kernel: l2
+        bandwidth: 5.0
+        exponent: 1.0
+        diag: false
+        bandwidth_mode: constant
+      fit:
+        reg: 0.001
+        iters: 0
+        M_batch_size: 256
+        verbose: false
+        early_stop_rfm: false
+

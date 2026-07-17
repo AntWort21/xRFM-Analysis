@@ -1,0 +1,93 @@
+{
+  "best_params": {
+    "colsample_bytree": 0.9,
+    "learning_rate": 0.05,
+    "max_depth": 5,
+    "n_estimators": 300,
+    "n_jobs": 1,
+    "name": "xgb_clf_depth5_lr005",
+    "reg_lambda": 1.0,
+    "subsample": 0.9
+  },
+  "categorical_columns": [
+    "sex",
+    "dataset",
+    "cp",
+    "fbs",
+    "restecg",
+    "exang",
+    "slope",
+    "thal"
+  ],
+  "created_at": "2026-04-23T00:04:01+00:00",
+  "dataset": "heart_disease_uci",
+  "feature_dim": 29,
+  "inference_time_per_sample_seconds": 4.133380412974435e-06,
+  "model": "xgboost",
+  "numeric_columns": [
+    "age",
+    "trestbps",
+    "chol",
+    "thalch",
+    "oldpeak",
+    "ca"
+  ],
+  "seed": 42,
+  "split_path": "/Users/yuancao/Desktop/xRFM-Analysis/data/splits/heart_disease_uci__seed_42.json",
+  "target_column": "has_disease",
+  "target_metadata": {
+    "class_mapping": {
+      "0": 0,
+      "1": 1
+    },
+    "classes": [
+      "0",
+      "1"
+    ],
+    "encoding": "label",
+    "rule": "has_disease = 1 if num > 0 else 0",
+    "source_column": "num",
+    "target_transform": "heart_disease_binary"
+  },
+  "task": "classification",
+  "test_metrics": {
+    "accuracy": 0.8532608695652174,
+    "auc_roc": 0.910210425633668
+  },
+  "test_size": 184,
+  "train_size": 552,
+  "training_time_seconds": 0.025997042015660554,
+  "tuning_results": [
+    {
+      "name": "xgb_clf_depth3_lr005",
+      "validation_metrics": {
+        "accuracy": 0.782608695652174,
+        "auc_roc": 0.8619081779053085
+      },
+      "validation_score": 0.782608695652174
+    },
+    {
+      "name": "xgb_clf_depth5_lr005",
+      "validation_metrics": {
+        "accuracy": 0.7880434782608695,
+        "auc_roc": 0.849713055954089
+      },
+      "validation_score": 0.7880434782608695
+    },
+    {
+      "name": "xgb_clf_depth3_lr01",
+      "validation_metrics": {
+        "accuracy": 0.782608695652174,
+        "auc_roc": 0.8620277379244381
+      },
+      "validation_score": 0.782608695652174
+    }
+  ],
+  "validation_metrics": {
+    "accuracy": 0.7880434782608695,
+    "auc_roc": 0.849713055954089
+  },
+  "validation_score": 0.7880434782608695,
+  "validation_score_metric": "accuracy",
+  "validation_size": 184
+}
